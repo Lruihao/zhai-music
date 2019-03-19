@@ -15,11 +15,11 @@ return [
     // 服务器地址
     'hostname'        => '127.0.0.1',
     // 数据库名
-    'database'        => 'music_php',
+    'database'        => 'player_lruihao_c',
     // 用户名
-    'username'        => 'root',
+    'username'        => 'player_lruihao_c',
     // 密码
-    'password'        => '123456',
+    'password'        => 'PtKwPLM87G7CCyss',
     // 端口
     'hostport'        => '3306',
     // 连接dsn

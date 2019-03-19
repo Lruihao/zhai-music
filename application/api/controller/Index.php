@@ -49,7 +49,7 @@ class Index extends Controller
         $result .= "showGreeting = ".$player->show_greeting.",";
         $result .= "defaultAlbum = ".$player->default_album.",";
         $result .= "siteName = '".$player->site_name."',";
-        $result .= "background = ".$player->background.",";
+    	$result .= "background = ".$player->background.",";
         $result .= "playerWidth = ".$player->player_width.",";
         $result .= "coverWidth = ".$player->cover_width.",";
         $result .= "showNotes = ".$player->show_notes.",";

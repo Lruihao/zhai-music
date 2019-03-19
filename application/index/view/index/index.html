@@ -1,117 +1,270 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-    <meta name="keywords" content="宅音乐播放器，HTML5浮窗音乐播放器，网页音乐播放器，IT技术宅音乐博播放器"/>
-    <meta name="description" content="宅音乐播放器，专注于网页端音乐播放，多列表，多专辑，更专业"/>
-    <title>宅音乐播放器</title>
-    <link rel="stylesheet" href="https://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/plugins/font-awesome-4.7.0/css/font-awesome.css">
-    <link rel="stylesheet" href="/static/css/index.css">
-    <link rel="shortcut icon" href="favicon.ico">
-    <!--<link rel="stylesheet" type="text/css" href="/player/css/player.css">-->
-    <!--<link href="http://libs.baidu.com/fontawesome/4.2.0/css/font-awesome.css" rel="stylesheet" type="text/css">-->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>宅音乐播放器</title>
+	<link rel="stylesheet" type="text/css" href="static/css/custom/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="static/css/custom/htmleaf-demo.css">
+	<link rel="stylesheet" href="static/css/custom/nheader.css">
+	<link rel="stylesheet" href="static/css/custom/nstyle.css">
+	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!--<script src="https://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>-->
 </head>
-<body class="fixed-nav">
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/"><img src="/static/images/logo_w.png" alt="logo" class="logo-img"></a>
-        </div>
-        <div class="collapse navbar-collapse" id="collapse">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="/">首页</a></li>
-                <li><a target="_blank" href="http://www.ilt.me/grfx/109.html">接入</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="/admin/user/login" target="_blank"><i class="fa fa-user"></i> 登录</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-<div class="jumbotron">
-    <div class="container">
-        <h1>宅音乐播放器</h1>
-        <p>一款方便快捷的HTML5音乐播放器</p>
-        <p class="btn-group hidden-xs">
-            <a class="btn btn-primary btn-lg" href="/admin/user/login" target="_blank"> 立即注册</a>
-            <a class="btn btn-primary btn-lg" href="/admin/user/login" target="_blank"> 登录</a>
-        </p>
-        <p class="btn-group visible-xs">
-            <a class="btn btn-primary btn-lg" href="/admin/user/login" target="_blank"> 立即注册</a>
-            <a class="btn btn-primary btn-lg" href="/admin/user/login" target="_blank"> 登录</a>
-        </p>
-    </div>
-</div>
-<div class="container" id="con">
-    <div class="row text-center">
-        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-            <img src="/static/images/lrc.png" alt="describe image" class="desc img-responsive">
-            <h3>LRC歌词</h3>
-            <p>歌词实时同步，麻麻再也不怕我听不懂歌词了</p>
-        </div>
-        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-            <img src="/static/images/list.png" alt="describe image" class="desc img-responsive">
-            <h3>多列表功能</h3>
-            <p>多个列表随心换，想听哪个就听哪个，就这么任性！</p>
-        </div>
-        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-            <img src="/static/images/mode.png" alt="describe image" class="desc img-responsive">
-            <h3>多种播放模式</h3>
-            <p>随机、列表、循环、单曲四种播放模式随心切换，最接近客户端的体验！</p>
-        </div>
-        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-            <img src="/static/images/style.png" alt="describe image" class="desc img-responsive">
-            <h3>样式自定义</h3>
-            <p>这可能是最方便二次开发的音乐播放器插件了。</p>
-        </div>
-    </div>
-    <h2>未来可能会添加的功能</h2>
-    <div class="table-responsive">
-        <table class="table table-hover table-striped">
-            <tr>
-                <th>功能</th>
-                <th>状态</th>
-            </tr>
-            <tr>
-                <td>播放记忆</td>
-                <td>制作中</td>
-            </tr>
-            <tr>
-                <td>快捷键绑定</td>
-                <td>未开工</td>
-            </tr>
-            <tr>
-                <td>移动端优化</td>
-                <td>未开工</td>
-            </tr>
-            <tr>
-                <td>兼容低版本IE</td>
-                <td>未开工</td>
-            </tr>
-        </table>
-    </div>
-</div>
-<footer class="bg-bottom">
-    <div class="container">
-        <p class="pull-right">
-            <a href="#"><span class="fa fa-arrow-circle-up fa-3x"></span></a>
-        </p>
-        <div class="copy">
-            <p>&copy;2018 <a href="http://www.ilt.me" target="_blank">IT技术宅</a></p>
-            <p>Powered By <a target="_blank" href="http://getbootstrap.com">Bootstrap</a></p>
-        </div>
-    </div>
-</footer>
-<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script id="ilt" src="/player/js/player.js" key="2e086053d2f44e79a489e38085e9edb6"></script>
+<body>
+	<div class="header">
+		<ul class="nav_list">
+			<li class="nav_li">
+				<a href="javascript:void(0);" class="btn_nav" id="nav_more"><i class="ic_more png"></i>首页</a>
+				<div class="more_nav" id="more_nav">
+					<!--[if lt IE 9]>
+						<span class="opc_bg"></span>
+					<![endif]-->
+					<i class="ic_bdot png" id="h_bdot"></i>
+					<ul id="h_nav">
+						<li><a href="/admin/user/login" class="btn_snav" target="_blank">登录</a></li>
+						<li><a href="https://lruihao.cn" class="btn_snav" target="_blank">介绍</a></li>
+						<li><a href="https://www.lruihao.cn" class="btn_snav" target="_blank">Demo</a></li>
+					</ul>
+					<p style="text-align: center;margin-top: 360px;">&copy;2019 <a href="https://lruihao.cn" target="_blank">博採眾長</a></p>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="wrap" id="wrap">
+		<div class="wrapper">
+			<div class="product_list" id="product_list">
+				<div class="product_box shoulei show">
+					<div class="bg_box"><img src="static/img/bg_shoulei.jpg"></div>
+				</div>
+				<div class="product_box xnet">
+					<div class="bg_box"><img src="static/img/bg_xnet.jpg"></div>
+				</div>
+				<div class="product_box member">
+					<div class="bg_box"><img src="static/img/bg_member.jpg"></div>
+				</div>
+				<div class="product_box xkn">
+					<div class="bg_box"><img src="static/img/bg_xkn.jpg"></div>
+				</div>
+				<div class="product_box xav">
+					<div class="bg_box"><img src="static/img/bg_xav.jpg"></div>
+				</div>
+			</div>
+			<div class="product_btns" id="product_btns">
+				<div class="content">
+					<div class="btns_area">
+						<div class="btns_box" id="control_box">
+							<a href="#" class="btn_ipr btn_shoulei cur" title="LRC歌词" ></a>
+							<a href="#" class="btn_xnet" title="多列表功能"></a>
+							<a href="#" class="btn_member" title="多种播放模式"></a>
+							<a href="#" class="btn_xkn" title="样式自定义"></a>
+							<a href="#" class="btn_xav" title="移动支持"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="rpt_bg png" id="rpt_bg"></div>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+	  (function(){
+	    var $wrap=$("#wrap"),
+	        $pages=$("#product_list").find(".product_box"),
+	        $controlBox=$("#control_box"),
+	        $productBtns=$("#product_btns"),
+	        $controls=$controlBox.find("a"),
+	        $icLine=$("#ic_line"),
+	        $listTops=$("#list_top").find("li"),
+	        $hNav=$("#h_nav"),
+	        $hNavli=$hNav.find("li"),
+	        $hSubnav=$("#h_subnav"),
+	        $hSubDD=$hSubnav.find("dd"),
+	        $hBdot=$("#h_bdot"),
+	        $hSdot=$("#h_sdot"),
+	        $footer=$("#footer"),
+	        $bgs=$pages.find(".bg_box img"),
+	        $mainBoxs=$pages.find(".main_box"),
+	        $moreNav=$("#more_nav"),
+	        $rptBg=$("#rpt_bg");
+	    var data={
+	        pLength:$pages.length,
+	        curP:0,
+	        isCan:true,
+	        isOnbtn:false,
+	        fColor:[2,2,1,1,1],
+	        dur: 3500,
+	        cNum:0
+	    };
+	    var aDD=$controls.eq(0).width()+parseInt($controls.eq(0).css("margin-right").slice(0,-2))*2;
+	    var cId;
+	    var isCss3=function(){
+	      var style=document.createElement("div").style;
+	        for(var k in style){
+	          if(k.toLowerCase().indexOf("animation")>0){
+	            return true;
+	          }
+	         }
+	         return false;
+	    }();
+	    var isIE6=navigator.userAgent.indexOf("MSIE 6.0") > 0;
+	    //页面自缩放
+	    var resize=function(){
+	      var w=$(window).width(),
+	          h=$(window).height();
+	      $wrap.height(h);
+	      $moreNav.height(h);
+	      if(w/h<1920/1080){
+	        $bgs.height(h).css({width:"auto",margin:-.5*h+"px 0 0 "+-.5*1920/1080*h+"px"});
+	      }else{
+	        $bgs.width(w).css({height:"auto",margin:-.5*w*1080/1920+"px 0 0 "+-.5*w+"px"});
+	      }
+	      var imgH=$bgs.height();
+	      $mainBoxs.height(imgH).css("margin-top",-.5*imgH+"px");
+	      var cls;
+	      if(isCss3){
+	        document.getElementById("wrap").className="wrap big_view xbig";
+	        switch(true){
+	          case w>=1920:{cls="";break;}
+	          case w<1920&&w>=1680:{cls="small9";break;}
+	          case w<1680&&w>=1600:{cls="small8";break;}
+	          case w<1600&&w>=1536:{cls="small7";break;}
+	          case w<1536&&w>=1440:{cls="small6";break;}
+	          case w<1440&&w>=1366:{cls="small5";break;}
+	          case w<1366&&w>=1280:{cls="small4";break;}
+	          case w<1280&&w>=1024:{cls="small3";break;}
+	          case w<1024:{cls="small2";break;}
+	        }
+	        for(var i=0;i<data.pLength;i++){
+	          $pages.eq(i).find(".content").attr("class","content "+cls);
+	        }
+	        $productBtns.find(".content").attr("class","content "+cls);
+	      }else{
+	        switch(true){
+	          case w>=1600:{cls="big_view";break;}
+	          case w<1600&&w>=1440:{cls="mid_view";break;}
+	          case w<1440:{cls="small_view";break;}
+	        }
+	        var ws=$wrap[0].className;
+	        if(isIE6&&(ws.indexOf("big")!=-1||ws.indexOf("mid")!=-1||ws.indexOf("small")!=-1)&&ws.indexOf(cls)==-1)
+	          location.reload();
+	        wrap.className="wrap "+cls;
+	      }
+	      aDD=$controls.eq(0).width()+parseInt($controls.eq(0).css("margin-right").slice(0,-2))*2;
+	    };
+	    $(window).resize(resize);
+	    resize();
+
+	    var pageChange=function(idx){
+	      if(data.isOnbtn)
+	        return;
+	      if(idx>=-1&&idx<data.pLength&&idx!=data.curP&&data.isCan){
+	      data.isCan=false;
+	        data.cNum++;
+	        clearInterval(cId);
+	        idx=idx==-1?data.pLength-1:idx;
+	        $controls.removeClass("cur").eq(idx).addClass("cur");
+	        $pages.eq(data.curP).css({zIndex:0});
+	        $icLine.css({left:aDD*idx});
+	       // $footer.attr("class","footer f_color"+data.fColor[idx]);
+	        $pages.eq(idx).addClass("show").css({opacity:0,zIndex:1}).animate({opacity:1},400,function(){
+	          $pages.eq(data.curP).removeClass("show");
+	          $(this).addClass("show");
+	          data.isCan=true;
+	          data.curP=idx;
+	          data.cNum--;
+	          if(data.cNum==0){
+	            cId=setInterval(function(){
+	              pageChange((data.curP+1)%data.pLength);
+	            },data.dur);
+	          }
+	        });
+	      }
+	    }
+	    $controls.on("mouseenter",function(){
+	      data.isCan=true;
+	      pageChange($controls.index(this));
+	      $icLine.css({left:aDD*$controls.index(this)});
+	      data.isOnbtn=true;
+	    });
+	    $controls.on("mouseleave",function(){
+	      data.isOnbtn=false;
+	    });
+
+	    var isBottom=false;
+	    var bAni;
+	    var bottomHide=function(){
+	      if(isBottom){
+	        isBottom=false;
+	        if(bAni)
+	          clearTimeout(bAni),bAni=null;
+	        $footer.removeClass("show");
+	        $productBtns.removeClass("show");
+	        $rptBg.removeClass("show");
+	      }
+	    }
+	    var bottomShow=function(){
+	      if(!isBottom){
+	        isBottom=true;
+	        $footer.addClass("show");
+	        $productBtns.addClass("show");
+	        $rptBg.addClass("show");
+	        if(bAni)
+	          clearTimeout(bAni);
+	        bAni=setTimeout(bottomHide,2000);
+	      }
+	    }
+	    $footer.on("mouseenter",function(){
+	      if(bAni)
+	        clearTimeout(bAni),bAni=null;
+	    });
+	    $footer.on("mouseleave",function(){
+	      if(bAni)
+	        clearTimeout(bAni);
+	      bAni=setTimeout(bottomHide,2000);
+	    });
+	    $(document).on("mousewheel DOMMouseScroll",function(event){
+	      var sd=event.originalEvent.wheelDelta||event.originalEvent.detail*-1;
+	      if(sd>0){
+	        bottomHide();
+	      }
+	      else{
+	        bottomShow();
+	      }
+	    });
+	    cId=setInterval(function(){
+	      pageChange((data.curP+1)%data.pLength);
+	    },data.dur);
+
+	    //导航事件
+
+	    $("#nav_more").on("mouseenter",function(){
+	      $moreNav.addClass("show");
+	    });
+	    $moreNav.on("mouseleave",function(){
+	      $moreNav.removeClass("show");
+	      $hBdot.css({left:-9999,top:106});
+	    })
+	    $hNavli.on("mouseenter",function(){
+	      $hBdot.css({left:18,top:106+$hNavli.index(this)*69});
+	    });
+	    $hNav.on("mouseleave",function(){
+	      $hBdot.css({left:-9999});
+	    });
+	    $hSubnav.find("dt").on("mouseenter",function(){
+	      $hBdot.css({left:18});
+	      $hSdot.css({left:-9999});
+	    });
+	    $hSubDD.on("mouseenter",function(){
+	      $hSdot.css({left:18,top:53+$hSubDD.index(this)*44});
+	      $hBdot.css({left:-9999});
+	    });
+	    $hSubnav.on("mouseleave",function(){
+	      $hSdot.css({left:-9999});
+	    });
+	  })();
+	</script>
+	<script id="ilt" src="https://player.lruihao.cn/player/js/player.js" key="f94ee8d6f6404a1e8ae0cff6fd05f98e"></script>
 </body>
 </html>

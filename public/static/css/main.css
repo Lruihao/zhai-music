@@ -7,3 +7,7 @@
 .admin-main .layui-field-title .layui-field-box p{
 	padding: 5px 0;
 }
+@font-face {
+ font-family: MMT;
+ src: url("../fonts/LRH.ttf");
+}

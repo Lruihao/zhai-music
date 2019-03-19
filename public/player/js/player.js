@@ -193,7 +193,7 @@ jQuery.cookie=function(b,j,m){if(typeof j!="undefined"){m=m||{};if(j===null){j="
     var cicleTime = null;
     $cover.html('<img src="">');
     $songName.html('<a style="color:#f00">正在初始化</a>');
-    $songFrom.html('<a style="color:#f00">www.ilt.me</a>');
+    $songFrom.html('<a style="color:#f00">www.lruihao.cn</a>');
     $songFrom1.html('<a style="color:#f00">音乐播放器</a>');
     $songFrom3.html('<i class="fa fa-times-circle"></i> 歌词未载入');
 

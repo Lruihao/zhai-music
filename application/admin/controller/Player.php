@@ -39,7 +39,7 @@ class Player extends BackendBaseController
             'auto_player'=> 1,
             'random_player'=> 1,
             'name'=> $this->request->post('name'),
-            'site_name'=> 'IT技术宅',
+            'site_name'=> '博採眾長',
             'greeting'=> '欢迎光临寒舍！',
             'show_greeting'=> 1,
             'background'=> 1,
