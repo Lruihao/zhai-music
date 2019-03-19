@@ -12,7 +12,7 @@
 
 /* 声明全局变量 */
 :root {
-    --player-width: 335px;
+    --player-width: 350px;
     --cover-width:115px;
 }
 #lzxPlayer {
@@ -38,14 +38,14 @@ ul, li {
     -moz-transition: .5s;
     -ms-transition: .5s;
     transition: .5s;
-    left: 330px;
-  	left: calc(var(--player-width) * -1);
+    left: 345px;
+    left: calc(var(--player-width) * -1);
     text-align: left;
     color: #38343e;
-    width: 330px;
- 	width: var(--player-width);
+    width: 345px;
+    width: var(--player-width);
     position: fixed;
-    bottom: 50px;
+    bottom: 40px;
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     z-index: 999;
@@ -73,7 +73,7 @@ ul, li {
     background-color: #fff;
     width: 115px;
     height: 115px;
-  	width: var(--cover-width);
+    width: var(--cover-width);
     height: var(--cover-width);
     top: 50%;
     left: 50%;
@@ -81,7 +81,7 @@ ul, li {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     margin-top: -67.5px;
     margin-left: -57.5px;
-  	margin-top: calc(var(--cover-width) / -2 - 10px);
+    margin-top: calc(var(--cover-width) / -2 - 10px);
     margin-left: calc(var(--cover-width) / -2);
 }
 
@@ -92,7 +92,7 @@ ul, li {
     width: 100%;
     left: 0;
     text-align: center;
-    top: 45px;/*font-family: "沐目体";font-weight: 600;font-size: 200%;*/
+    top: 45px;
   	font-size: 150%;
 }
 
@@ -113,7 +113,7 @@ ul, li {
     border: 3px #fff solid;
     width: 118px;
     height: 118px;
-  	width: calc(var(--cover-width) + 3px);
+    width: calc(var(--cover-width) + 3px);
     height: calc(var(--cover-width) + 3px);
     top: -5px;
     left: -5px;
@@ -222,7 +222,8 @@ ul, li {
     z-index: 99999;
     margin-top: -32px;
     margin-left: -22px;
-  	font-size: 20px;
+    font-size: 20px;
+    cursor: url(link.cur), pointer;
 }
 
 #lzxPlayer .player .status b {
@@ -236,7 +237,7 @@ ul, li {
     border-radius: 50%;
     background-color: #2c2a30;
     display: inline-block;
-    overflow: hidden;
+    overflow: hidden
 }
 
 #lzxPlayer .player .status b .fa {
@@ -538,7 +539,7 @@ ul, li {
     -ms-user-select: none;
     user-select: none;
     height: 305px;
-    width: 350px;
+    width: 365px;
     width: calc(var(--player-width) + 15px);
     weight: 100%;
     overflow: hidden;
@@ -621,7 +622,8 @@ ul, li {
 }
 
 #lzxPlayer .playlist .list:hover {
-    width: 350px
+    width: 350px;
+    width: var(--player-width)
 }
 
 #lzxPlayer .playlist .list:hover .mCSB_scrollTools {
@@ -672,11 +674,12 @@ ul, li {
 }
 
 #lzxPlayer.show {
-    -webkit-transform: translate3d(330px, 0, 0);
-    -moz-transform: translate3d(330px, 0, 0);
-    -ms-transform: translate3d(330px, 0, 0);
-    transform: translate3d(330px, 0, 0);
-  	-webkit-transform: translate3d(var(--player-width), 0, 0);
+    -webkit-transform: translate3d(345px, 0, 0);
+    -moz-transform: translate3d(345px, 0, 0);
+    -ms-transform: translate3d(345px, 0, 0);
+    transform: translate3d(345px, 0, 0);
+
+    -webkit-transform: translate3d(var(--player-width), 0, 0);
     -moz-transform: translate3d(var(--player-width), 0, 0);
     -ms-transform: translate3d(var(--player-width), 0, 0);
     transform: translate3d(var(--player-width), 0, 0);
@@ -1165,8 +1168,8 @@ ul, li {
 .player .blur {
     display: none;
     position: relative;
-    width: 350px;
-  	width: var(--player-width);
+    width: 365px;
+    width: var(--player-width);
     height: 155px;
     filter: url(blur.svg#blur);
     -webkit-filter: blur(20px);
@@ -1445,8 +1448,8 @@ ul, li {
 }
 
 .blur-img {
-    width: 330px;
-  	width: var(--player-width);
+    width: 345px;
+    width: var(--player-width);
     height: 155px;
     position: absolute;
 }
@@ -1454,7 +1457,7 @@ ul, li {
 .blur {
     display: none;
     position: relative;
-    width: 350px;
+    width: 365px;
     height: 155px;
     filter: url(blur.svg#blur); /* FireFox, Chrome, Opera */
     -webkit-filter: blur(20px); /* Chrome, Opera */
