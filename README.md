@@ -8,7 +8,7 @@
 ## 演示站
 https://player.ilt.me/
 
-https://
+https://player.lruihao.cn
 ## 安装
 ### 视频安装教程
 https://www.bilibili.com/video/av46476706
