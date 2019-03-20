@@ -45,7 +45,7 @@ ul, li {
     width: 345px;
     width: var(--player-width);
     position: fixed;
-    bottom: 40px;
+    bottom: 50px;
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     z-index: 999;
@@ -292,7 +292,7 @@ ul, li {
 /*进度开始----------------------------------------------------*/
 #lzxPlayer .player .musicbottom .rate {
     position: absolute;
-    left: 30px;
+    left: 15px;
     top: 6px;
     color: #cccbce;
 }
@@ -308,6 +308,7 @@ ul, li {
 #lzxPlayer .player .musicbottom .rate .progress {
     position: relative;
     width: 190px;
+  	width: calc(var(--player-width) - 120px);
     margin-top: 4.5px;
     height: 4px;
     background-color: #b0aeb2;
