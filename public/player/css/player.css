@@ -45,7 +45,7 @@ ul, li {
     width: 345px;
     width: var(--player-width);
     position: fixed;
-    bottom: 50px;
+    bottom: 40px;
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     z-index: 999;
@@ -92,8 +92,8 @@ ul, li {
     width: 100%;
     left: 0;
     text-align: center;
-    top: 45px;
   	font-size: 150%;
+    top: 45px
 }
 
 #lzxPlayer .player .cover.changing img {
@@ -169,11 +169,13 @@ ul, li {
 #lzxPlayer .player .control .loop, #lzxPlayer .player .control .prev{
     margin-right: 25px;
     cursor: url(link.cur), pointer;
+    color: inherit;
 }
 
 #lzxPlayer .player .control .next,#lzxPlayer .player .control .random{
     margin-left: 25px;
     cursor: url(link.cur), pointer;
+    color: inherit;
 }
 
 #lzxPlayer .player .control i.current {
@@ -286,17 +288,27 @@ ul, li {
     width: 100%;
     left: 0;
     bottom: 0;
-    line-height: 25px
+    line-height: 25px;
+    display: flex;
 }
 
 /*进度开始----------------------------------------------------*/
 #lzxPlayer .player .musicbottom .rate {
-    position: absolute;
-    left: 15px;
-    top: 6px;
     color: #cccbce;
+    height: 100%;
+    position: relative;
+    line-height: 100%;
+    overflow: hidden;
+    display: inline-block;
+    padding-left: 15px;
+    box-sizing: border-box;
+    flex: 1;
+    padding-right: 10px;
 }
-
+#lzxPlayer .player .musicbottom .icons{
+    display: inline-block;
+    width:100px
+}
 #lzxPlayer .player .musicbottom .rate .mute {
     float: left
 }
@@ -307,19 +319,21 @@ ul, li {
 
 #lzxPlayer .player .musicbottom .rate .progress {
     position: relative;
-    width: 190px;
-  	width: calc(var(--player-width) - 120px);
-    margin-top: 4.5px;
-    height: 4px;
+    width: 100%;
     background-color: #b0aeb2;
     overflow: visible;
+    vertical-align: sub;
+    display: inline-block;
+    height: 5px;
+    border-radius: 2px;
+    margin: auto;
 }
 
 #lzxPlayer .player .musicbottom .rate .progress .rate-on {
     position: relative;
     background-color: #81c300;
     width: 0;
-    height: 4px;
+    height: 100%;
 }
 
 #lzxPlayer .player .musicbottom .rate .progress .rate-on .drag {
@@ -332,6 +346,22 @@ ul, li {
     border-radius: 50%;
     box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
     cursor: url(link.cur), pointer;
+}
+#lzxPlayer.phone .player .musicbottom .rate .progress .rate-on .drag{
+    width: 18px;
+    height: 18px;
+    top: -7px;
+    right: -9px;
+}
+#lzxPlayer .musicbottom .rate-buffered{
+    position: absolute;
+    width: 0;
+    background-color: #777777;
+    height: 100%;
+    top: 0;
+    transition-duration: .5s;
+    transition-property: width;
+    transition-timing-function: ease;
 }
 /*进度结束----------------------------------------------------*/
 
@@ -1573,4 +1603,7 @@ ul, li {
 }
 #lzxLrc.phone li{
     font-size:1.0em;
+}
+#lzxPlayer .infos i,#lzxPlayer .status .note i{
+    color: inherit;
 }
