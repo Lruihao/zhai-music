@@ -593,7 +593,10 @@ ul, li {
     height: 40px;
     line-height: 40px;
     border-bottom: solid #eee 1px;
-    background-color: rgba(0, 0, 0, 0.1)
+    background-color: rgba(0, 0, 0, 0.1);
+  	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 #lzxPlayer .playlist .list li:last-child {
