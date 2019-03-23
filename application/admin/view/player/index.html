@@ -68,6 +68,7 @@
                 <!-- /header -->
                 <header class="larry-personal-tit">
                     <span><i class="layui-icon">&#xe620;</i>播放器配置</span>
+                  	<button id="testPlayer" onclick="testPlayer('{$entity.id}','{$entity.name}');return false;" class="layui-btn layui-btn-xs">测试播放器</button>
                 </header>
                 <div class="larry-personal-body clearfix">
                     <form class="layui-form form-container" method="post">
@@ -195,7 +196,7 @@
                                     <div class="layui-input-block save-button">
                                         <button class="layui-btn" lay-submit lay-filter="*">保存配置</button>
                                         <button type="reset" class="layui-btn layui-btn-primary">恢复默认</button>
-                                      	<button class="layui-btn layui-btn layui-btn-danger" onclick="delPlayer('{$entity.id}');return false;">删除播放器</button>
+                                      	<button class="layui-btn layui-btn layui-btn-danger" onclick="delPlayer('{$entity.id}');return false;">删除</button>
                                     </div>
                                 </div>
                             </div>
@@ -252,6 +253,24 @@
         layui.use('jquery', function () {
             $ = layui.jquery;
             $(entity).parent().parent().remove();
+        });
+    }
+  	
+  	function testPlayer(id,name) {
+        layui.use('jquery', function () {
+            $ = layui.jquery;
+            layer.confirm('是否要测试播放器：'+'{$entity.name}'+'？', {
+                icon: 3,
+                title: '《{$entity.name}》测试'
+            }, function () {
+                $('#testPlayer').hide();
+                layer.close(layer.index);
+                var script=document.createElement("script");
+                script.setAttribute("id", "ilt");
+                script.setAttribute("src", (document.location.protocol === "http:" ? "http" : "https") + "://" + document.location.host + "/player/js/player.js");
+                script.setAttribute("key", '{$entity.id}');
+                document.documentElement.appendChild(script);
+            });
         });
     }
 </script>

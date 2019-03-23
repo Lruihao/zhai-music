@@ -41,7 +41,7 @@ jQuery.cookie=function(b,j,m){if(typeof j!="undefined"){m=m||{};if(j===null){j="
     var jsUrl = $("#ilt").attr("src");
     var webURL = jsUrl.startsWith("http") ? jsUrl.substring(0,jsUrl.indexOf("/",8)) : window.location.origin;
     var keyId = $("#ilt").attr("key");
-    $("head").append('<link rel="stylesheet" type="text/css" href="' + webURL + '/player/css/player.css">');
+    $("head").append('<link rel="stylesheet" type="text/css" href="' + webURL + '/player/css/player.css" media="all">');
     $("head").append('<link href="https://libs.baidu.com/fontawesome/4.2.0/css/font-awesome.css" rel="stylesheet" type="text/css">');
 
     $("body").append('<div id="lzxPlayer">\n' +
