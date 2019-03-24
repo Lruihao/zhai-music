@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="/static/plugins/layui/css/layui.css" media="all"/>
     <link rel="stylesheet" href="/static/css/global.css" media="all">
     <link rel="stylesheet" href="/static/plugins/font-awesome-4.7.0/css/font-awesome.min.css">
-  	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 <body>
 <div class="layui-layout layui-layout-admin">
@@ -30,5 +29,12 @@
 </div>
 {block name="script"}
 {/block}
+<script>
+    // 定义为测试环境
+    lzxPlayerTest = true;
+    lzxPlayerTestKey = null;
+</script>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script id="ilt" src="/player/js/player.js"></script>
 </body>
 </html>

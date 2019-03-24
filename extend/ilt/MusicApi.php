@@ -768,7 +768,7 @@ class MusicApi
                             'author' => $radio_data['singerName'],
                             'lrc' => $radio_lrc,
                             'url' => $radio_data['url'],
-                            'pic' => $radio_song_album ?: $radio_song_img,
+                            'pic' => $radio_song_album ?: $radio_song_img
                         ];
                     }
                 }
@@ -844,7 +844,7 @@ class MusicApi
                                 'author' => $radio_author,
                                 'lrc' => $this->str_decode($radio_lrc['lyric']),
                                 'url' => $radio_music,
-                                'pic' => '//y.gtimg.cn/music/photo_new/T002R300x300M000' . $radio_album_id . '.jpg',
+                                'pic' => 'https://y.gtimg.cn/music/photo_new/T002R300x300M000' . $radio_album_id . '.jpg',
                                 'album_name' => $value['album']['name']
                             ];
                         }
@@ -1104,7 +1104,7 @@ class MusicApi
                                 'author' => $radio_author,
                                 'lrc' => !empty($radio_lrc['lrc']) ? $radio_lrc['lrc']['lyric'] : '',
                                 'url' => MC_INTERNAL ? $radio_urls[$radio_song_id] : 'https://music.163.com/song/media/outer/url?id=' . $radio_song_id . '.mp3',
-                                'pic' => $value['album']['picUrl'] = str_replace('http://', '//', $value['album']['picUrl']) . '?param=300x300',
+                                'pic' => str_replace('http://', 'https://', $value['album']['picUrl']) . '?param=300x300',
                                 'album_name' => $value['album']['name']
                             ];
                         }
@@ -1254,10 +1254,30 @@ class MusicApi
     {
         $quality = array('M500', 'C400');
         foreach ($quality as $value) {
-            $url = '//dl.stream.qqmusic.qq.com/' . $value . $songmid . '.mp3?vkey=' . $key . '&guid=5150825362&fromtag=1';
+            $url = 'https://dl.stream.qqmusic.qq.com/' . $value . $songmid . '.mp3?vkey=' . $key . '&guid=5150825362&fromtag=1';
             if (!$this->mc_is_error($url)) {
                 return $url;
             }
+        }
+    }
+
+    // 生成酷我音乐歌词
+    public function generate_kuwo_lrc($lrclist)
+    {
+        if (!empty($lrclist)) {
+            $lrc = '';
+            foreach ($lrclist as $val) {
+                if ($val['time'] > 60) {
+                    $time_exp = explode('.', round($val['time'] / 60, 4));
+                    $minute = $time_exp[0] < 10 ? '0' . $time_exp[0] : $time_exp[0];
+                    $sec = substr($time_exp[1], 0, 2) . '.' . substr($time_exp[1], 2, 2);
+                    $time = '[' . $minute . ':' . $sec . ']';
+                } else {
+                    $time = '[00:' . $val['time'] . ']';
+                }
+                $lrc .= $time . $val['lineLyric'] . "\n";
+            }
+            return $lrc;
         }
     }
 
@@ -1287,31 +1307,11 @@ class MusicApi
                 'song_id' => $radio_song_id.'',
                 'name' => $value['name'],
                 'artist_name' => $radio_author,
-                'album_cover' => $value['album']['picUrl'] = str_replace('http://', '//', $value['album']['picUrl']) . '?param=300x300',
+                'album_cover' => str_replace('http://', 'https://', $value['album']['picUrl']) . '?param=300x300',
                 'album_name' => $value['album']['name']
             ];
         }
         return $radio_songs;
-    }
-
-    // 生成酷我音乐歌词
-    public function generate_kuwo_lrc($lrclist)
-    {
-        if (!empty($lrclist)) {
-            $lrc = '';
-            foreach ($lrclist as $val) {
-                if ($val['time'] > 60) {
-                    $time_exp = explode('.', round($val['time'] / 60, 4));
-                    $minute = $time_exp[0] < 10 ? '0' . $time_exp[0] : $time_exp[0];
-                    $sec = substr($time_exp[1], 0, 2) . '.' . substr($time_exp[1], 2, 2);
-                    $time = '[' . $minute . ':' . $sec . ']';
-                } else {
-                    $time = '[00:' . $val['time'] . ']';
-                }
-                $lrc .= $time . $val['lineLyric'] . "\n";
-            }
-            return $lrc;
-        }
     }
 
     // jsonp 转 json
