@@ -162,7 +162,8 @@
 body .layui-layout-admin .footer-demo {
     height: auto;
     padding: 5px 0;
-    line-height: 26px;
+    line-height: 15px;
+    z-index: 999;
 }
 
 .footer a {
@@ -1483,4 +1484,7 @@ header.larry-personal-tit span {
         float: left;
     }
 }
-
+.layui-btn {
+    margin-top: 5px;
+    margin-left: 0!important;
+}
