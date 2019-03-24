@@ -49,13 +49,14 @@ composer install
 - 添加public为web根目录
 - 若为apache服务器则默认伪静态，nginx可自行配置伪静态
 ## 预览
+![player](preview/player.png)
 ### 首页
-![webconfig](preview/index.png)
+![index](preview/index.png)
 ### 登陆页面
-![webconfig](preview/login.png)
+![login](preview/login.png)
 ### 后台首页
-![webconfig](preview/admin_index.png)
+![admin_index](preview/admin_index.png)
 ### 后台播放器管理页面
-![webconfig](preview/admin_player.png)
+![admin_player](preview/admin_player.png)
 ### 后台歌单管理页面
-![webconfig](preview/admin_song_sheet.png)
+![admin_song_sheet](preview/admin_song_sheet.png)
