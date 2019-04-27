@@ -1,7 +1,7 @@
 # 宅音乐播放器
 --------
 宅音乐播放器，HTML5网页播放器，集成后台管理及API调用，目前正在开发中，敬请关注~
-[更多介绍](https://lruihao.cn/html-css/player.html)
+[更多介绍](https://lruihao.cn/posts/player.html)
 ## 技术栈
 - 后端：thinkphp 5.1
 - 前端：layui
